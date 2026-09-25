@@ -1,23 +1,62 @@
 aid: angstrom
+
 name: Angstrom
-description: 'Angstrom is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Angstrom Sports provides advanced sports forecasting and data analytics solutions for the US betting industry. Leveraging over 50 years of combined experience in bookmaking, modelling, proprietary trading, risk management, and service delivery, the company offers Monte‑Carlo simulations, granular play‑by‑play data, and neural‑network driven player valuation. Their platform delivers real‑time insights and predictive analytics to help clients make informed betting decisions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/angstrom/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Sports
+- Analytics
+- Forecasting
+- Betting
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angstrom-hosts.yml
+- type: TermsOfService
+  url: https://angstromsports.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://angstromsports.com/privacy/
+- type: DomainSecurity
+  url: security/angstrom-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/angstrom_stock/
+  url: https://angstromsports.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
